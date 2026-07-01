@@ -10,9 +10,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.red)),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+      ),
       home: Scaffold(
         appBar: AppBar(title: Text('First Project'), centerTitle: true),
         body: LayoutBuilder(
@@ -37,11 +40,13 @@ class MyApp extends StatelessWidget {
                     ),
 
                     Center(
-                      child: FilledButton(
+                      child: IconButton(
+                        iconSize: 100,
+                        color: Colors.lightGreen,
                         onPressed: () {
                           print('Hai premuto il bottone grande!');
                         },
-                        child: Text('Premi qui'),
+                        icon: Icon(Icons.person),
                       ),
                     ),
                   ],
@@ -67,11 +72,13 @@ class MyApp extends StatelessWidget {
                     ),
 
                     Center(
-                      child: ElevatedButton(
+                      child: IconButton(
+                        iconSize: 84,
+                        color: Colors.pink,
                         onPressed: () {
-                          print('Hai premuto il bottone!');
+                          print('Hai premuto il bottone piccolo!');
                         },
-                        child: Text('Premi qui'),
+                        icon: Icon(Icons.add),
                       ),
                     ),
                   ],
