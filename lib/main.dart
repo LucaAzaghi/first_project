@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
 
                     Container(
                       color: Colors.red,
+                      width: size.width * 0.7,
                       padding: EdgeInsets.all(5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -64,6 +65,8 @@ class MyApp extends StatelessWidget {
 
                     Container(
                       color: Colors.green,
+                      height: size.height * 0.2,
+                      width: size.width * 0.8,
                       padding: EdgeInsets.all(5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
